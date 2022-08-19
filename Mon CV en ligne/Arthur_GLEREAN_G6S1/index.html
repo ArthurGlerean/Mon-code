@@ -1,0 +1,391 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="keywords" content="cv, développeur, jeune,informatique …" />
+	<meta name="author" content="Arthur Glerean">
+	<meta name="description" content="Ce site représente mon curriculum vitae pour que vous puissiez me découvrir...">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<title>CV-Arthur Glerean</title>
+</head>
+
+<body>
+
+	<!-- HAUT DE LA PAGE -->     <!-- Sources images: site pixabay(qui propose des images libres de droit) et google images (recherche -->
+								<!-- avec l'outil 'Licences Creative Commons' -->
+	<header>
+		<h1>Arthur Glerean</h1>
+		<h2>Etudiant en informatique</h2>
+		<div class="bookmark">
+			<i class="fas fa-bookmark"></i>
+		</div>
+		<div class="image">
+			<img src="images/Autres/MaPhoto.png" alt="Mon visage" onclick="alert('Coucou, c\'est moi')"/> <!-- JS: Clic sur photo=message alert -->
+		</div>
+		
+	</header>
+
+	<div class="select">  <!-- Onglet de navigation -->
+			<ul>
+				<li class="redirection"><a href="#cadre1">A propos</a></li> 
+				<li class="redirection"><a href="#cadre2">Compétences</a></li> 
+				<li class="redirection"><a href="#cadre3">Expériences</a></li> 
+				<li class="redirection"><a href="#cadre4">Formations</a></li> 
+				<li class="redirection"><a href="#cadre5">Centres d'intérêts</a></li> 
+			</ul>
+	</div>
+
+	<!-- Contenu général de la page -->
+
+	<main class="container">
+
+		<!-- PRESENTATION GENERALE -->
+
+		<section id="cadre1">
+			<div class="cadrejaune">
+				<h2>A propos de moi...<button onclick="deploiement('coordonnees')" class="bouton"></button></h2> <!-- JS: appel de la fonction deploiement pour fermer/ouvrir la section (voir code source JS) -->
+				<hr>
+				<div id="coordonnees">
+					<div class="coordonnees2">			<!-- Section sur les informations personnelles -->
+
+						<div class="presentation">
+							<img src="images/Autres/photomoi2.png" alt="memoji">
+							<p>Étudiant ambitieux qui rêve de devenir développeur Web</p>
+							
+							<div class="listes">
+								<div class="listebis">
+									<h3>Atouts ✔️</h3>
+									<ul id="atouts" title="Mes atouts">                                <!-- Mes atouts -->
+										<li>Ambitieux</li>
+										<li>Dynamique</li>
+										<li>Ponctuel</li>
+										<li>Social</li>
+									</ul>
+								</div>
+								<div class="listebis">
+									<h3>Défauts ❌</h3>
+									<ul id="défauts" title="Mes défauts">								<!-- Mes défauts -->
+										<li>Obstiné</li>
+										<li>Gourmand</li>
+										<li>Anxieux</li>
+									</ul>
+								</div>
+							</div>
+							<p>Pour toute demande me concernant, veuillez vous rediriger <a href="#Formulaire">ici</a></p>
+
+						</div>
+						<div class="rightcoordonnees">
+							<ul class="apropos">
+								<li><i class="fas fa-home-lg-alt"></i>  Sathonay-Village    </li>   <!-- Liste de mes coordonnées -->
+								<li><i class="fas fa-phone-square-alt"></i>  07-83-28-55-35  </li>
+								<li><i class="fas fa-envelope"></i>  arthur.glerean@gmail.com  </li>
+								<li><i class="fas fa-child"></i>  19 ans  </li>
+							</ul>
+							<blockquote class="citation">
+								<h3>🧠 Ma mentalité</h3>
+								<p><q><em>L'imagination est plus importante que le savoir. </em></q>  Albert Einstein</p><!-- Citation me représentant -->
+							</blockquote>
+						</div>
+						
+
+					</div>
+					
+				</div>
+		
+			</div>	
+		</section>
+
+		<!-- MES COMPETENCES -->
+
+		<section id="cadre2"> 
+			<div class="cadrenoir">
+				<h2>Mes compétences: <button onclick="deploiement('competences')" class="bouton"></button></h2>
+				<hr>
+				<div id="competences">
+					<div class="competences2">			<!-- Section sur les compétences -->
+						<div class="element">
+							<h3>Programmation en Python</h3> 
+							<img src="images/informatique/python2.png" alt="Logo Python">
+							<br>
+							<progress value="60" max="100">60%</progress>         <!-- Progress bars qui informent sur mon niveau dans les compétences -->
+						</div>														<!-- citées. -->
+						<div class="element">
+							<h3>Conception HTML et CSS</h3> 
+							<img src="images/informatique/htmlcss2.png" alt="logo HTML et CSS">
+							<br>
+							<progress value="70" max="100">70%</progress>
+						</div>
+						<div class="element">
+							<h3>Language C</h3> 
+							<img src="images/informatique/LanguageC.png" alt="Logo C#">
+							<br>
+							<progress value="50" max="100">50%</progress>
+						</div>
+						<div class="element">
+							<h3>Maitrise de SQLdeveloper</h3>
+							<img src="images/informatique/database.png" alt="Logo SQL">
+							<br>
+							<progress value="70" max="100">70%</progress>
+						</div>
+						<div class="element">
+							<h3>Utilisateur de GitHub</h3> 
+							<img src="images/informatique/Git.png" alt="Logo Github">
+							<br>
+							<progress value="40" max="100" class="progressbar">40%</progress>
+						</div>
+					</div>
+					
+					
+				</div>
+
+			</div>
+		</section>
+
+		<!-- MES EXPERIENCES -->
+		
+		<section id="cadre3"> 
+			<div class="cadrejaune">
+				<h2>Mes expériences <button onclick="deploiement('experience')" class="bouton"></button></h2>
+				<hr>
+
+				<div id="experience">
+					<div class="experience2">				<!-- Section sur les expériences -->
+						<h3>Entreprises</h3>
+						<div class="entreprises">
+
+						<!--Les entreprises -->
+
+							<div class="travail">
+								<a href="https://www.pagesjaunes.fr/pros/57486827" target="blanck"><img src="Images/Entreprises/veterinaire.jpg" alt="veterinaire"></a>
+								<p>Stage d'obervation au sein du<br>
+								cabinet vétérinaire du docteur<br> 
+								Choquart, grâce auquel j'ai pu<br>
+								découvrir le travail au contact<br> 
+								des animaux.</p>
+							</div>
+							<div class="travail">
+								<a href="https://fr.worldline.com/fr/home.html" target="blanck"><img src="images/entreprises/worldline.jpg" alt="logo Worldline"></a>
+								<p>Stage d'observation chez<br> 
+								Worldline aux côtés d'un ingénieur<br>
+								en informatique pour qui le travail<br>
+								était de coder sur des interactions<br>
+								Homme/machine (élétroménagé).</p>
+							</div>
+
+							<div class="travail">
+								<a href="https://www.font-ly.com/" target="blanck"><img src="images/entreprises/font-ly.jpg" alt="logo Font-Ly"></a>
+								<p>Entreprise pour laquelle je<br> 
+								travaille régulièrement en tant<br>
+								que magasinier. J'acquéris à <br>
+								leurs côtés les compétences <br>
+								idéales pour le travail d'équipe</p>
+							</div>
+						</div>
+
+						<!-- L'association -->
+
+						<h3>Associations</h3>	
+						<div class="association">
+							<a href="https://solidarite-soboyo.fr/" target="blanck"><img src="images/entreprises/soboyo.png" alt="logo soboyo"></a>
+							<p> Soboyo est une association que j'affectionne tout partiuclièrement. À leurs côtés, j'ai pu donner de mon temps pour 
+								une Afrique meilleure, en luttant contre la pauvreté, la faim, et la guerre. Pendant 1 an, nous avons cherché en équipe les meilleures solutions pour répondre aux besoins du peuple centrafricain.
+							</p>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</section>
+
+		<!-- MES FORMATIONS -->
+
+		<section id="cadre4"> 
+			<div class="cadrenoir">
+				<h2>Mes formations <button onclick="deploiement('formations')" class="bouton"></button></h2>
+				<hr>
+				<div id="formations">
+					<div class="formations2">			<!-- Section sur les formations -->
+						<div class="lestables">
+							<table>
+								<thead>
+									<tr>
+										<th colspan="1">Collège Saint Charles Rillieux-La-Pape</th>
+									</tr>
+								</thead>
+								<tbody id="Saint-Charles">
+									<tr>
+										<td>
+											
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table>
+								<thead>
+									<tr>
+										<th colspan="1">Lycée Saint Louis Saint Bruno:</th>
+									</tr>
+								</thead>
+								<tbody id="SLSB">
+									<tr>
+										<td>
+																						<!-- Différents tableaux pour présenter les -->	
+										</td>												<!-- établissements que j'ai fréquenté -->
+									</tr>
+								</tbody>
+							</table>
+
+							<table>
+								<thead>
+									<tr>
+										<th colspan="1">Lycée La Martinière Monplaisir</th>
+									</tr>
+								</thead>
+								<tbody id="LMM"> 
+									<tr>
+										<td>
+											
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table>
+								<thead>
+									<tr>
+										<th colspan="1">IUT Villeurbanne La Doua</th>
+									</tr>
+								</thead>
+								<tbody id="IUT">
+									<tr>
+										<td>
+											
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<hr>
+						<div class="dates">
+							<div><p>2013: Brevet des collèges (mention 'très bien')</p></div>
+							<div><p>2017: Bac Scientifique spé SVT (mention 'bien')</p></div>
+							<div><p>2020: CPGE Scientifique (PTSI) (réorientation)</p></div>
+							<div><p>...2023: DUT Informatique (en cours d'obtention)</p></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+		<!-- MES CENTRES D'INTERETS -->
+
+		<section id="cadre5">
+			<div class="cadrejaune">
+				<h2>Mes centres d'intérêts <button onclick="deploiement('centresinterets')" class="bouton"></button> </h2>
+				<hr>
+				<div id="centresinterets">
+					<div class="centresinterets2">			<!-- Section sur les centres d'intérêts -->
+						<div class="element2">
+							<div class="icon">
+								<i class="fas fa-tv"></i>
+							</div>
+							<h3>Informatique</h3>
+							<div class="text">
+								Je pratique régulièrement, en plus de mes cours,
+								la programmation (apprentissage du développement
+								Web).						
+							</div>
+						
+						</div>
+						
+						<div class="element2">
+							<div class="icon">
+								<i class="fas fa-tools"></i>
+							</div>
+							<h3>Bricolage</h3>
+							<div class="text">
+								Depuis le plus jeune âge, j’aime tout particulièrement
+								le bricolage, la rénovation, le jardinage, et  je suis
+								habitué aux travaux d’intérieurs comme extérieurs.						
+							</div>
+							
+						</div>
+						
+						<div class="element2">
+							<div class="icon">
+								<i class="fas fa-futbol"></i>
+							</div>
+							<h3>Sport</h3>							
+							<div class="text">
+								Depuis 10 ans je pratique le football, ce qui m’a
+								permis d’acquérir la capacité à être au sein d’un
+								groupe et d’entretenir sa cohésion.
+							</div>
+							
+						</div>
+					
+						<div class="element2">
+							<div class="icon">
+								<i class="fas fa-paw"></i>
+							</div>
+							<h3>Animaux</h3>
+							<div class="text">
+								J’apprécie tout particulièrement le contact avec
+								les animaux, qu’ils soient marins, sauvages ou
+								domestiques et m’intéresse de tout près à certains
+								d’entre eux.				
+							</div>
+							
+						</div>
+					</div>
+											
+										
+				</div>
+			</div>
+		</section>
+
+		
+	</main>
+
+	<!-- LE BAS DE PAGE -->
+
+	<footer>
+		
+		<section class="Contact">		<!-- Section contact/formulaire -->
+			<h2>Me contacter</h2>
+			<!-- FORMULAIRE -->
+			<div class=contentcontact>
+				<form id="Formulaire">
+					<input type="text" placeholder="Nom">
+					<input type="text" placeholder="Prénom">
+					<div class="entree">
+						<input id="email" type="email" placeholder="Email" onkeydown="validation()">
+						<span id="saisie"></span>
+					</div>
+					<textarea placeholder="Votre message" rows=12 cols=30 class="message"></textarea> 
+					<select name="Genre">
+						<option value="--Genre--">--Genre--</option>
+						<option value="Femme">Femme</option>
+						<option value="Homme">Homme</option>
+						<option value="Autres">Autres</option>
+					</select>
+					<button id="button" type="button"> Envoyer </button>
+				</form>
+				<img id="lettre" src="images/Autres/avionpapier.png" alt="avion papier">
+				<div class="Linkedin"><a href="https://www.linkedin.com/in/arthur-glerean-8aab6a210/" target="blanck">Linkedin <i class="fab fa-linkedin"></i></a></div>
+			</div>
+
+		</section>
+	</footer>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,657 @@
+/***** MON CSS *****/
+
+/*-----------Structure et police-----------*/
+@font-face{
+	font-family:'blinkerregular';
+	src:url('Font/Blinker/blinker-regular-webfont.woff') format('woff'),
+		url('Font/Blinker/blinker-regular-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:'Prototype';
+	src: url('Font/Prototype/Prototype.woff')format('woff');
+	font-weight: normal;
+	font-style:normal;
+}
+
+*{
+	font-family:'blinkerregular';
+}
+
+html{
+	scroll-behavior: smooth;         /*Scroll plus lent lors des clics sur raccourcis*/
+}
+
+body{
+	margin:auto;
+	box-sizing: border-box;
+}
+
+
+
+/*-----------Partie en-tête du CV-----------*/
+
+header{
+	height:180px;
+	text-align:center;
+	font-size:25px;
+	font-weight: bold;             /*titre en gras*/        /*background recouvrant toute la partie du header*/
+	background-color: #231C1B;
+	color:#FEFAF9;
+}
+
+header h1{
+	margin-top:0;
+	padding-top:10px;
+}
+
+
+
+.bookmark {
+	left:100px;
+	top:-10px;         /*-10px pour que le haut du bookmark soit à la bonne hauteur.*/
+	font-size: 150px;
+	position:absolute;
+	color:#ffc000;
+	transition: .3s ease-in-out;        /*Transition retour*/
+}
+.bookmark:hover{
+	transition: .3s ease-in-out;        /*Transition aller*/
+	top:-30px;
+}
+
+.image{
+	right:60px;
+	top:10px;
+	position: absolute;
+	filter: drop-shadow(0 0 0.75rem #ffc000);       /*Effet ombre autour de ma photo;0,75rem='rayon' du cercle autour du quel l'ombre s'affiche*/
+}
+
+.image img{
+	width:150px;
+	height:150px;	
+	border:5px solid #ffc000;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: .3s ease-in-out;              
+}
+.image img:hover{                          /*Agrandissement de l'image au passage de la souris*/
+	transition:.3s ease-in-out;
+	width:160px;
+	height: 160px;
+}
+
+/*-----------Onglet séléction-----------*/
+
+.select{
+	height: auto;
+	width: 100%;
+	background:#eee;
+	border-top:solid 2px grey;
+	border-bottom:solid 2px grey;
+	text-align: center;
+		
+}
+.select ul{
+	display: flex;
+	flex-direction: row;      /*menu en horizontale, wrap pour permettre de s'aadapter en cas de réduction de l'écran (lorsqu'il n'y a plus de place*/
+	flex-wrap: wrap;		  /*le contenu passe en dessous).*/
+	padding: 0px;
+	justify-content: space-between;
+}
+
+.select li{
+	margin:0px 40px;
+}
+
+
+
+
+.select ul li a{
+	text-decoration: none;
+	color:black;
+}
+
+
+
+.redirection :hover{		/*Passage de la souris: le texte devient gris*/
+	color:grey;
+}
+
+
+
+
+/*-----------Partie globale du CV-----------*/
+
+.container{
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction: column;             /*Page du site sous forme de colonne (avec plusieurs éléments).*/
+}
+
+
+/*-----------cadres-----------*/
+
+.cadrenoir{
+	width: auto;
+	height: auto;
+	padding:30px 30px;
+	font-size:20px;
+	background:#231C1B;    
+	color: #FEFAF9;	
+}
+.cadrenoir ::selection
+{
+	background-color:#ffc000;        /*Si l'utilisateur séléctionne du texte dans un cadre noir, la couleur de saisie sera jaune/orange*/
+}
+
+
+.cadrejaune{
+	width: auto;
+	height: auto;
+	padding:30px 30px;
+	font-size:20px;
+	background:#ffc000 ;   
+	color:#231C1B;            
+	
+}
+.cadrejaune ::selection
+{
+	background-color:#231C1B;      /*Même principe que pour les cases noires, cette fois ci la couleur de saisie est noire.*/
+}
+
+.cadrenoir h2{
+	text-align:left;
+	font-size: 25px;
+	font-family: 'Prototype';       /*Titre des cases avec un police différente.*/
+}
+
+.cadrejaune h2{
+	text-align:right;
+	font-size: 25px;
+	font-family:'Prototype';
+}
+
+.cadrejaune button{
+	position:absolute;
+	left:0;						/*Bouton positionné sur la gauche (car le titre est à droite) */
+	margin-left:30px;
+}
+.cadrenoir button{
+	position:absolute;
+	right:0;					/*Bouton positionné sur la droite (car le titre est à gauche) */
+	margin-right:30px;
+}
+
+button:hover{
+	background: #E5E2E2;         /*Bouton avec un gris plus foncé au passage de la souris*/
+}
+
+.montrer{
+	display:block; 
+}
+                                  /*Styles CSS pour montrer/cacher les sections. */
+.cacher{
+	display:none;
+}
+
+/*------------Mes coordonnées-----------*/
+.coordonnees2{
+	display:flex;
+	flex-direction: row;
+	text-align:left;
+	font-size:20px;
+	padding:60px;
+	justify-content: center;
+	align-items: center;
+
+}
+.rightcoordonnees{
+	display:flex;
+	flex-direction: column;
+	align-items: left;
+}
+/*apropos*/
+.apropos{
+	border:solid 1px black;
+	background-color:#eee;
+	padding:5px;
+	margin:2px;
+	width: 565px;
+	height: 142px;
+	box-shadow: 4px 4px 5px black;
+	transition: .3s ease-in-out;
+	font-size: 30px;
+}
+.apropos ul li i{
+	color:black;
+}
+
+.apropos:hover{
+	background: #E5E2E2;
+	margin-bottom:115px;
+	transition: .3s ease-in-out;
+	font-weight: bold;
+}
+
+/*presentation*/
+
+.presentation{
+	padding:5px;
+	background: #eee;
+	text-align:center;
+	border:solid 1px black;
+	box-shadow: 4px 4px 5px black;
+}
+.presentation:hover{
+	background: #E5E2E2;
+}
+.presentation p::first-line
+{
+	font-weight: bold;
+	color:#861111;
+}
+
+.presentation p{
+	margin:0;
+}
+.presentation img{
+	width:200px;
+	height: 200px;
+}
+
+
+.listes{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.listes ul{
+	padding-left:0;
+	margin:0;
+	margin-bottom: 10px;
+}
+
+.listebis{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction: column;
+}
+
+#atouts h3{
+	color:green;
+}
+#défauts h3{
+	color:red;
+}
+
+/*citation*/
+.citation{
+	padding:10px;        
+	background:#eee;
+	box-shadow: 4px 4px 5px black;     /*Effet d'ombre sur le blockquote*/
+	margin:2px;
+	border:solid 1px black;
+	transition: .3s ease-in-out;
+	width: 555px;
+	height: 142px;
+}
+.citation:hover{
+	background: #E5E2E2;
+	transition: .3s ease-in-out;
+	font-weight: bold;
+	margin-top:115px;
+}
+
+
+
+
+/*-----------Mes compétences-----------*/
+.competences2{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: center;         /*Contenu centré par rapport à la page*/
+}
+.competences2 img{
+	width:190px;
+	height: 190px;
+}
+.element{
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	margin:40px;
+}
+
+.element img{
+	opacity: 1;                 /*Opacité de l'image à 1 (visible au maximum)*/
+	transition: .3s ease-in-out;   /*Apparition progressive de l'opacité au passage de la souris */
+	border-radius: 20px;
+	cursor: pointer;
+
+}
+
+.element img:hover {
+	opacity: .5;            /*Opacité augmentée au passage de la souris par l'utilisateur (l'image devient moins visible)*/
+}
+
+.element h3{
+	border:solid 2px #868e96;
+	padding: 5px;
+	font-size:20px;
+	color:#868e96;
+}
+
+
+/*-----------Expériences-----------*/
+.experience2{
+	display:flex;
+	flex-direction: column;
+}
+
+.experience2 h3{
+	width: 400px;
+	border-bottom: 5px solid black;
+}
+/*entreprises*/
+.entreprises{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.travail{
+	display:flex;
+	flex-direction: column;
+	background:#231C1B;
+	text-align:center;
+	color:white;
+	padding:30px;
+	box-shadow: 4px 4px 5px white;
+	border-radius:20%;
+	width:280px;
+	height: 280px
+}
+.travail i{
+	font-size: 100px;
+	color:white;
+}
+.travail p{
+	font-size: 18px;
+	color:#868e96;
+}
+/*association*/
+.association{
+	display:flex;
+	flex-direction: row;
+}
+.association img{
+	opacity: 1;
+	transition: .3s ease-in-out;     /*Transition identique aux images de 'Compétences'*/
+	width:200px;
+	height: 200px;
+	margin-right:40px;
+	box-shadow: 4px 4px 5px white;
+}
+.association img:hover {
+	opacity: .5;
+}
+.association p{
+	width: 500px;
+	height: 204.8px;
+}
+
+
+
+.travail img{
+	opacity: 1;
+	transition: .3s ease-in-out;
+	width: 150px;
+	height: 150px;
+}
+.travail img:hover{
+	opacity: .5;
+}
+
+/*-----------Formations-----------*/
+.formations2{
+	display: flex;
+	padding: 0px 200px;
+	justify-content: center;
+
+}
+.lestables{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#Saint-Charles{
+	background-image:url("../images/Ecoles/SaintCharles.jpg");
+	background-size: 236px 190px;
+}
+#SLSB{
+	background-image:url("../images/Ecoles/SLSB.jpg");
+	background-size: 236px 190px;
+}
+#LMM{
+	background-image:url("../images/Ecoles/LMM.jpg");
+	background-size: 242px 190px;
+}
+#IUT{
+	background-image:url("../images/Ecoles/IUT.jpg");
+	background-size: 241px 215px;
+}
+.formations2 hr{
+	margin:30px 40px;
+}
+.dates{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color:#868e96;
+}
+.dates p:hover{             /*Couleur jaune sur les dates au passage de la souris*/
+	color:#ffc000;
+}
+
+
+table{
+	width: 250px;
+	height: 250px;
+	margin:30px 0px;
+	border:solid 3px #FEFAF9;
+}
+
+thead{
+	background-color:#FEFAF9;
+	color:#231C1B;
+	font-size: 22px;
+}
+
+
+
+
+/*-----------Centres d'intérêts-----------*/
+.centresinterets2{
+	display:flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+
+.element2{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin:30px 18px;
+	align-items: center;
+	background: linear-gradient(to bottom,#D39F00,#ffc000);
+	border-top:solid 2px black;
+	width: 329px;
+	height: 286px;
+}
+
+
+.icon{
+	margin:20px;
+	font-size: 60px;
+}
+.text{
+	font-size: 17px;
+	text-align: justify;
+	width: 300px;
+	height: 80px;
+}
+.element2 h3{
+	text-align:center;
+	color:black;
+}
+
+.element2 h3:hover{                          /*soulignement au passage de la souris*/
+	text-decoration: underline;
+}
+
+
+
+/*-----------Others-----------*/
+ul{
+	list-style-type: none;
+}
+
+
+
+progress{
+	width: 190px;
+}
+
+/*-----------ScrollBar-----------*/
+::-webkit-scrollbar{
+	width: 10px;                          /*Réduction de l'épaisseur de la barre de défilement */
+}
+::-webkit-scrollbar-track{
+	border-left:3px solid black;              /*Ajout d'une bordure noire (uniquement gauche et droite pour un meilleur rendu visuel)*/
+	border-right:3px solid black;
+	box-shadow: inset 0 0 2px 2px rgba(0,0,0,0.5);  /*Ombre portée('inset'),décallage d'ombre 0px (en x et y), étallement de l'ombre 2px (blur and spread), et sa couleur rgb */
+}
+::-webkit-scrollbar-thumb{                          /*Partie du scrollbar où l'utilisateur fait une saisie avec sa souris */
+	background:linear-gradient(3deg,black,yellow);  /* Dégradé de couleur (du noir au jaune) */
+	border-radius: 3px;                             /*Angles arrondies*/
+}
+
+
+	
+
+
+
+
+/*-----------Partie basse du CV (footer)-----------*/
+
+footer{
+	height: auto;                      /*Hauteur automatique du footer (dans l'optique de rajouter certains éléments au fur et à mesure de*/
+	margin:0;                         /*mon expérience en HTML/CSS/JS */
+	padding:30px;
+	background-color:#231C1B;
+	color:#FEFAF9;
+}
+
+footer h2{
+	margin:0;
+}
+
+.Contact{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;                       /*alignement sur le bas*/
+}
+
+.contentcontact{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+
+#Formulaire{
+	display:flex;
+	flex-direction: column;
+	flex-wrap:wrap;
+	width: 300px;
+}
+.entree{
+	display:flex;
+	flex-direction: column;
+}
+#saisie{
+	font-style: italic;
+}
+input{
+	background:#292929;
+	color:#ffc000;
+	border:none;
+	border-radius: 6px;
+	padding:10px;
+	margin-bottom: 5px;
+
+}
+.message{
+	background:#292929;
+	color:#ffc000;
+	border:none;
+	border-radius: 6px;
+	padding:10px;
+	margin-bottom: 5px;
+}
+::placeholder{                         /*Ecriture blanche sur le formulaire, lorsque l'utilisateur n'a pas encore saisie au clavier.*/
+	color:white;
+}
+select{
+	background:#292929;
+	color:white;
+	border:none;
+	border-radius: 6px;
+	padding:10px;
+	margin-bottom: 5px;
+
+}
+#button{
+	margin-top:10px;
+	border-radius: 6px;
+}
+
+#lettre{
+	width: 400px;
+	height: 400px;
+}
+
+.Linkedin{
+	bottom:0;
+	height: 30px;
+	width: 100px;
+	margin-top:180; 
+	color:white;
+	font-size: 20px;
+}
+
+.Linkedin a{
+	text-decoration: none;
+	color:white;
+}
+
+.Linkedin a i{
+	color:#0a66c2;
+}
+
+
+
+
+
+
+
+
